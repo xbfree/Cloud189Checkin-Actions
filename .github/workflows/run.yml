@@ -10,7 +10,6 @@ on:
   schedule:
     - cron: 0 2,14 * * *
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -64,9 +63,9 @@ jobs:
         done
 
         for ((i=0;i<$user_num;i++))
-        do
-        python3 C189Checkin.py <<EOF
-        ${user_list[$i]}
-        ${pwd_list[$i]}
-        EOF
+         do
+          python3 C189Checkin.py <<EOF
+          ${user_list[$i]}
+          ${pwd_list[$i]}
+         EOF
         done
